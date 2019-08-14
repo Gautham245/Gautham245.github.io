@@ -1,122 +1,409 @@
 
-<!DOCTYPE html><html lang='en' class=''>
-<head><script src='https://static.codepen.io/assets/editor/live/console_runner-1df7d3399bdc1f40995a35209755dcfd8c7547da127f6469fd81e5fba982f6af.js'></script><script src='https://static.codepen.io/assets/editor/live/css_reload-5619dc0905a68b2e6298901de54f73cefe4e079f65a75406858d92924b4938bf.js'></script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" /><link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" /><link rel="canonical" href="https://codepen.io/cneral21/pen/byVRgO?&page=2" />
-<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
-<style class="cp-pen-styles">body {
-  font-family: 'Muli', sans-serif;
-  padding-left: 10px;
-  padding-right: 10px;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
 
-.sub {
-  color: gray;
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>Resume</title>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+<style>
+    body{
+  background-color: #212121;
+  color: #e2e2e2;
+  font-family: "Helvetica Neue", "Calibri Light", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  /*letter-spacing: 0.02em;*/
+  margin:0px;
+  padding:0px;
 }
-
-.round-border {
-  border-radius: 20px;
-}
-
-#intro-flex {
+.container{
+  
   display: flex;
-  align-items: flex-end;
-  padding-top: 10px;
+  flex-direction: row;
+  justify-content: space-around;
 }
-
-.hor {
-  display: flex;
-  justify-content: space-between;
-}
-
-#intro-text {
-  width: 100%;
+.left-col{
+  display:flex;
   flex-direction: column;
+  padding-left: 5%;
+  flex: 1 0 0;
 }
 
-hr {
-  border: 1px dashed teal;
+.right-col{
+  display:flex;
+  flex-direction: column;
+  padding-left :3%;
+  flex: 2 0 0;
+  background-color: #F0F0F0;
+  color:#212121;
+}
+.name h1{
+  text-align: center;
+  text-transform: uppercase;
+  color: RGB(59,166,216);
 }
 
-.split {
+.name h1 span:first-child{
+  /*padding-left:0.3em;*/
+  letter-spacing: 0.2em;
+  font-weight: normal;
+}
+
+.photo {
+  margin: 20px 0;
+  align-self: center;
   width: 50%;
 }
 
-h1,h2{
-  color: teal;
+.photo img{
+  border: 2px solid RGB(166, 170, 169);
+  overflow: hidde;
+  width: 100%;
+  height: auto;
 }
 
-.icons {
+h2{
+  text-transform: uppercase;
+  width: 90%;
+  font-size:1.8em;
+  color:RGB(59, 166, 216);
+  border-bottom: 2px solid RGB(166, 170, 169);
+}
+
+ul{
+  margin-bottom: 0px;
+  list-style:none;
+  /*border: 1px solid white;*/
+  padding-left:2%;
+}
+ul li{
+  display:flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width:90%;
+}
+ul li i{
+  margin-right: 10px;
+  width:20px;
+  color: RGB(59, 166, 216);
+  font-size: 1.3em;
+}
+ul li p{
+  margin-top: 0px;
+}
+ul li p a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.bar{
+  
+  margin: 0px;
+  margin-left: auto;
+  border: 2px solid  RGB(59, 166, 216);
+  border-radius:8px;
+  width: 60%;
+  height: 15px;
+  overflow: hidde;
+}
+
+.slider{
+  width:60%;
+  height:74%;
+  background-color: RGB(166,170,169);
+  border: 2px solid  rgba(0,0,0,0);
+  background-clip: padding-box;
+  border-radius: 6px;
+}
+
+.education{
+  
+}  
+.header{
+  display: flex;
+  flex-direction: row;
+  align-items:  center;
+  width: 93%;
+}
+.header i{
+  margin-top:10px;
+  margin-right: 10px;
+  color: RGB(59, 166, 216);
+}
+
+p.bold{
+  font-size:1.4em;
+  margin-bottom:0px;
+  font-weight: 500;
+}
+p.date{
+  margin-top: 5px;
+  font-size:1.2em;
+  margin-bottom: 50px;
+}
+
+ul.main{
+  display:flex;
+  flex-flow: row wrap;
+  padding:0px;
+  margin-bottom: 0px;
+  list-style: none;
+}
+ul.main li{
+  width: 40%;
+}
+
+ul.main li:nth-child(odd){
+  margin-right: 5%;
+}
+
+ul.main li p{
+  margin-top: 0px;
+}
+
+.main a{
+  text-decoration: none;
+  margin: auto;
+  width:50%;
+  border: 2px solid RGB(166, 170, 169);
+  text-align:center;
+  padding:0px;
+  color: inherit;
+  margin-bottom:50px;
+}
+.main a:hover{
+  background-color: #212121;
+  color: #e2e2e2;
+  border-color: #F0F0F0;
+}
+
+.main a h3 {
+  margin:0px;
+  padding:20px;
+}
+
+footer{
+  padding: 10px 0;
+  color: #f0f0f0;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+  background-color:  RGB(59, 166, 216);
 }
 
-.center {
-  padding-left: 30px;
+a.icon { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:40px;
+  height:40px;
+  font-size: 25px;
+  margin: 0 5px;
+  color: #f0f0f0;
+  border: 2px solid #f0f0f0;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: background-color 0.2s ease-in; 
 }
 
-.skillBox {
-  background-color: teal;
-  width: 12%;
+a.icon:hover{
+  color: rgb(59, 166, 216);
+  background-color:  #f0f0f0;
+  transition: color 0.1s ease-in;
+}
+
+
+
+table {
+  font-family: "Helvetica Neue", Helvetica, sans-serif
+}
+thead {
+  background: SteelBlue;
   color: white;
-  padding-left: 5px;
-  border-radius: 10%;
-}</style></head><body>
-<div id="intro-flex">
-<div id="intro-text">
-<h1>Gautham Prabhu</h1>
-<h4 class="sub">Software Development Manager</h4>
-<h6>Professional software manager with over 3 years of experience managing teams charged with building out apps and other products.</h6>
+}
+th,
+td {
+  font-size: 15px;
+  padding: 5px 10px;
+}
+
+
+
+  </style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<div class="container">
+<div class="left-col">
+<div class="photo"><img src="https://1.bp.blogspot.com/-b2cCAw4YNXk/XVRXvOY6bZI/AAAAAAAAALk/98PpVfxTYrQ-71N-8yA9WiWsU94R8xS9ACK4BGAYYCw/s90/IMG-20190709-WA0011.jpg" alt="photo" /></div>
+<div class="name">
+<h1 align="center"> Gautham Prabhu </h1>
 </div>
-<img class="round-border float-right" width="100px" src="https://lh3.googleusercontent.com/YXcZnyb0wbt-XkbVOlaly_Io7oJDIUmUcn546T58xnc9pqihnBhxam9Lm0rL9Krnf9ut4jE4whFd3xrQvM0TI9FUTPq72BJYs2gEndYstG9VsLl7nOHTL0Gw6KkjZfzw1jUjpC2mH3wzFeebG5XwIYLDhEU_3yKmg6f20EGYaQllaS-AD5baXQh7NvOnc0bJ1hJEHlQ0iaUuHzu48ddZG1tQS7LgmOmj2Z81jaLEdV1scXZvBSPRYh-vrS9TxMv3K6iS4IEFqstmurjFWXUvi71N_qpyzfcB17Qpq_vMFh6un2CFPT7nYFfPodr1lGQPX7G-fPI_9x384hVDwxAuJZm72qxIbpR-5umiEDfN_n-hrQVKD8IdmeSRvOJBwuUlpPj0TMznajUl09n6JZjRvOjgzG_V6Sv5u56GimTcSw7YqHqQjlB2aswvMBAYSYgr7bXpt9ytJDxrFFi__AFcemuSqV3q89XgFn-4GqwiGySAiEvbfyEmSGlMd2qoBZcagQDkAJPvHnzZUtr2dSRCF1xQ_99buvZywVP2ceWLkHGoNV-FQ7JeRA0ylDbTNlUOIMv_iZj3q5lQWRuW2ZzGzczqrL-mpM5QDsIyWQjCCbVPOC186lVpZD7e180hJLrR67RBrSK7R_Xt1m6bl81nwtfD0_dECt4=w956-h1426-no">
+<div class="personalInfo">
+<h2>personal info</h2>
+<ul class="info">
+<li><i class="fa fa-home "></i>
+<p>'Sri Goplakrishna kripa' Rajeev Nagar 2nd Cross Manipal, Udupi Dist. PIN -567104</p>
+</li>
+<li><i class="fa fa-phone"></i>
+<p>+91 872 255 3777</p>
+</li>
+<li><i class="fa fa-envelope"></i>
+<p>gauthamprabhu245@gmail.com</p>
+</li>
+</ul>
 </div>
-<hr>
-<div class="icons">
-<i class="center far fa-envelope"> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8ee9effbfae6efe3fefcefece6fbcee9e3efe7e2a0ede1e3">[email&#160;protected]</a></i>
-<i class="center fas fa-mobile-alt"> 777-777-7777</i>
-<i class="center fas fa-map-marker-alt"> Salt Lake City, UT</i>
+<div class="language">
+<h2>Language</h2>
+<ul>
+<li><i class="fa fa-language"></i>
+<p>English</p>
+</li>
+<li><i class="fa fa-language"></i>
+<p>Hindi</p>
+</li>
+<li><i class="fa fa-language"></i>
+<p>Kannada</p>
+</li>
+<li><i class="fa fa-language"></i>
+<p>Konkani</p>
+</li>
+<li><i class="fa fa-language"></i>
+<p>Tulu</p>
+</li>
+</ul>
 </div>
-<hr>
-<div id="work">
-<h2>Work Experience</h2>
-<div class="hor">
-<h4>Software Development Manager</h4>
-<i class="fas fa-map-marker-alt"> Palo Alto, CA</i>
+<div class="hobbies">
+<h2>Hobbies / Intrests</h2>
+<ul>
+<li><i class="fa fa-film"></i>
+<p>Movies / Animes</p>
+</li>
+<li><i class="fa fa-bicycle"></i>
+<p>Sports</p>
+</li>
+<li><i class="fa fa-rocket"></i>
+<p>Traveling</p>
+</li>
+<li><i class="fa fa-music"></i>
+<p>Music</p>
+</li>
+</ul>
 </div>
-<h5>VMWare</h5>
-<h6>May 2018 - Prsent</h6>
-<p> Working onsite in Palo Alto, CA. Managing a team of 10 people as they built out the newest VM apps. Managing UX designers, UI designers, Java developers, and QA testers.</p>
-<div class="hor">
-<h4>Software Engineer</h4>
-<i class="fas fa-map-marker-alt">Walldorf, Germany</i>
 </div>
-<h5>SAP</h5>
-<h6>March 2017 - April 2018</h6>
-<p> Built applications on both mobile and web platforms using Swift, Java, and JavaScript.</p>
+<div class="right-col">
+<div class="CAREEROBJECTIVE:">
+<div class="header">
+<i class="fa fa-snowflake-o fa-2x"></i>
+<h2>CAREER OBJECTIVE</h2>
 </div>
-<hr class="split">
-<div id="education">
+Seeking a full-time career with an organization, which will permit me to use and
+contribute my abilities and also to enhance my knowledge and contribute
+towards its growth by committed and hardworking quality.
+</div>
+<div class="education">
+<div class="header">
+<i class="fa fa-graduation-cap fa-3x"></i>
 <h2>Education</h2>
-<div class="hor">
-<h4>AIET</h4>
-<i class="fas fa-map-marker-alt">VTU ,Indio</i>
 </div>
-<h5>Bachelor's of Science, Computer Science</h5>
-<h6>May 2016 - March 2017</h6>
-<p>Graduated in the top 10% of my class with a 3.95 grade point average. Completed an accelerated degree where I completed 25 credits a semester.</p>
+<table>
+<thead>
+<tr>
+<th>Qualification</th>
+<th>College </th>
+<th>Board / University</th>
+<th>Aggregate % or CGPA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SSLC / 10TH</td>
+<td>MPUC Manipal</td>
+<td>Karnataka State Board </td>
+<td>80%</td>
+</tr>
+<tr>
+<td>PUC / 12TH</td>
+<td>MGM Udupi</td>
+<td>Karnataka State Board </td>
+<td>65%</td>
+</tr>
+<tr>
+<td>B.E.</td>
+<td>Alva's Institute Of Engineering & Technology</td>
+<td>VTU Belgum</td>
+<td>6.65 CGPA</td>
+</tr>
+</tbody>
+</table>
 </div>
-<hr class="split">
-<div id="skills">
+<div class="workExperiences">
+<div class="header">
+<i class="fa fa-file-text fa-2x"></i>
+<h2>CERTIFICATION COURSES / WORKSHOPS</h2>
+</div>
+<p>1. Completed 5 days certification course on JAVA by SanagamOne</p>
+<p>2. Has attended Two days national workshop on “Realisation of Nano-Satellite by an Academic &nbsp;&nbsp;&nbsp;&nbsp;Institution” hosted by Planet Aerospace, Bangalore</p>
+<p>3. NPTEL certification course in Programing, Data Structure and Algorithm using Python</p>
+</div>
+<div class="INTERNSHIPS">
+<div class="header">
+<i class="fa fa-folder-open fa-3x"></i>
+<h2>INTERNSHIPS / MINI-PROJECTS </h2>
+</div>
+<p>1. Completed 15 days internship “Data Analytics, Machine Learning and Deep Learning” &nbsp;&nbsp;&nbsp;&nbsp;Conducted by Indian Institute of Information Technology, Allahabad</p>
+<p>2. Mini-Project on Personalized Series Database System</p>
+<p>3. Mini project on Ball game using Open GL library</p>
+</div>
+<div class="skills">
+<div class="header">
+<i class="fa fa-code fa-3x"></i>
 <h2>Skills</h2>
-<div class="hor">
-<div class="text-center skillBox">Leadership</div>
-<div class="text-center skillBox">JavaScript</div>
-<div class="text-center skillBox">Sitting</div>
-<div class="text-center skillBox">Shaking</div>
-<div class="text-center skillBox">SEO</div>
-<div class="text-center skillBox">Belly Rubs</div>
 </div>
-<br />
+<h4>Programming Language</h4>
+<table style="width:100%" align="left">
+<tr>
+<td>C</td>
+<td>Java</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>C++</td>
+<td>Python</td>
+<td>C#</td>
+</tr>
+</table>
+<h4>Professional Tools used</h4>
+<table style="width:113%" align="left">
+<tr>
+<td> Eclipse</td>
+<td> Git</td>
+<td>MS Visual Studio</td>
+</tr>
+<tr>
+<td>Netbeans</td>
+<td>MS Office</td>
+<td>Anaconda</td>
+</tr>
+</table>
 </div>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body></html>
+<footer center>
+<h4>Gautham Prabhu © 2019.</h4>
+<a class="icon" target="_blank" href="https://www.linkedin.com/in/gautham-prabhu-3a5b0a190">
+<i class="fa fa-linkedin"></i></a>
+<a class="icon" target="_blank" href="https://github.com/Gautham245">
+<i class="fa fa-github"></i></a>
+</footer>
+</body>
+</html>
+
